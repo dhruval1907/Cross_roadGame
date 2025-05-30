@@ -18,7 +18,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow: auto; /* Changed to allow scrolling if needed */
             margin: 0;
             padding: 10px;
         }
@@ -27,7 +27,7 @@
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
             border: 2px solid #ddd;
-            padding: 15px;
+            padding: 10px; /* Reduced padding */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             max-width: 100vw;
             max-height: 100vh;
@@ -35,14 +35,14 @@
 
         .game-header {
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 10px; /* Reduced margin */
             color: #333;
         }
 
         .game-title {
-            font-size: 2rem;
+            font-size: 1.5rem; /* Reduced font size */
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
             color: #2c3e50;
         }
@@ -50,29 +50,29 @@
         .game-stats {
             display: flex;
             justify-content: space-around;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #333;
         }
 
         .stat {
             text-align: center;
             background: #fff;
-            padding: 8px 15px;
-            border-radius: 10px;
+            padding: 6px 12px; /* Reduced padding */
+            border-radius: 8px;
             border: 2px solid #e0e0e0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .stat-value {
-            font-size: 2rem;
+            font-size: 1.5rem; /* Reduced font size */
             font-weight: bold;
             color: #4ecdc4;
         }
 
         .game-board {
             width: 100%;
-            max-width: 500px;
-            height: 500px;
+            max-width: 400px; /* Reduced from 500px */
+            height: 400px; /* Reduced from 500px */
             background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%);
             border-radius: 10px;
             position: relative;
@@ -89,32 +89,32 @@
             border-bottom: 3px dashed #f39c12;
         }
 
-        .road:nth-child(1) { top: 80px; height: 65px; width: 100%; }
-        .road:nth-child(2) { top: 180px; height: 65px; width: 100%; }
-        .road:nth-child(3) { top: 280px; height: 65px; width: 100%; }
-        .road:nth-child(4) { top: 380px; height: 65px; width: 100%; }
+        .road:nth-child(1) { top: 64px; height: 52px; width: 100%; } /* Scaled down proportionally */
+        .road:nth-child(2) { top: 144px; height: 52px; width: 100%; }
+        .road:nth-child(3) { top: 224px; height: 52px; width: 100%; }
+        .road:nth-child(4) { top: 304px; height: 52px; width: 100%; }
 
         .safe-zone {
             position: absolute;
             background: linear-gradient(90deg, #27ae60, #2ecc71);
             width: 100%;
-            height: 50px;
+            height: 40px; /* Reduced from 50px */
         }
 
         .safe-zone:nth-child(5) { top: 0; }
-        .safe-zone:nth-child(6) { top: 145px; }
-        .safe-zone:nth-child(7) { top: 245px; }
-        .safe-zone:nth-child(8) { top: 345px; }
-        .safe-zone:nth-child(9) { top: 445px; }
+        .safe-zone:nth-child(6) { top: 116px; } /* Adjusted proportionally */
+        .safe-zone:nth-child(7) { top: 196px; }
+        .safe-zone:nth-child(8) { top: 276px; }
+        .safe-zone:nth-child(9) { top: 356px; }
 
         .player {
             position: absolute;
-            width: 30px;
-            height: 30px;
+            width: 24px; /* Reduced from 30px */
+            height: 24px;
             background: linear-gradient(45deg, #e74c3c, #c0392b);
             border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 15px rgba(231, 76, 60, 0.8);
+            border: 2px solid white; /* Adjusted border */
+            box-shadow: 0 0 12px rgba(231, 76, 60, 0.8);
             transition: all 0.2s ease;
             z-index: 10;
         }
@@ -125,15 +125,15 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 16px;
+            font-size: 12px; /* Reduced emoji size */
         }
 
         .car {
             position: absolute;
-            width: 60px;
-            height: 30px;
-            border-radius: 15px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            width: 48px; /* Reduced from 60px */
+            height: 24px; /* Reduced from 30px */
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
             transition: all 0.1s ease;
         }
 
@@ -151,12 +151,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 20px;
+            font-size: 16px; /* Reduced emoji size */
         }
 
         .controls {
             text-align: center;
-            margin-top: 15px;
+            margin-top: 10px; /* Reduced margin */
             color: #333;
         }
 
@@ -164,19 +164,19 @@
             background: linear-gradient(45deg, #667eea, #764ba2);
             border: none;
             color: white;
-            padding: 12px 20px;
-            margin: 5px;
-            border-radius: 25px;
+            padding: 10px 16px; /* Reduced padding */
+            margin: 4px;
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 14px; /* Reduced font size */
             font-weight: bold;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .control-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
         }
 
         .control-btn:active {
@@ -190,10 +190,10 @@
             transform: translate(-50%, -50%);
             background: rgba(0, 0, 0, 0.9);
             color: white;
-            padding: 40px;
-            border-radius: 20px;
+            padding: 32px; /* Reduced padding */
+            border-radius: 16px;
             text-align: center;
-            font-size: 24px;
+            font-size: 20px; /* Reduced font size */
             z-index: 100;
             backdrop-filter: blur(10px);
             border: 2px solid rgba(255, 255, 255, 0.3);
@@ -207,11 +207,11 @@
             background: linear-gradient(45deg, #e74c3c, #c0392b);
             border: none;
             color: white;
-            padding: 15px 30px;
-            margin-top: 20px;
-            border-radius: 25px;
+            padding: 12px 24px; /* Reduced padding */
+            margin-top: 16px;
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 16px; /* Reduced font size */
             font-weight: bold;
             transition: all 0.3s ease;
         }
@@ -235,8 +235,8 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
-            gap: 10px;
-            max-width: 200px;
+            gap: 8px;
+            max-width: 160px; /* Reduced from 200px */
             margin: 0 auto;
         }
 
@@ -262,20 +262,39 @@
 
         @media (max-width: 768px) {
             .game-board {
-                height: 400px;
+                max-width: 320px; /* Further reduced for mobile */
+                height: 320px; /* Further reduced for mobile */
             }
             
-            .road { height: 50px; }
-            .road:nth-child(1) { top: 65px; }
-            .road:nth-child(2) { top: 145px; }
-            .road:nth-child(3) { top: 225px; }
-            .road:nth-child(4) { top: 305px; }
+            .road { height: 40px; } /* Adjusted proportionally */
+            .road:nth-child(1) { top: 52px; }
+            .road:nth-child(2) { top: 116px; }
+            .road:nth-child(3) { top: 180px; }
+            .road:nth-child(4) { top: 244px; }
             
-            .safe-zone { height: 40px; }
-            .safe-zone:nth-child(6) { top: 115px; }
-            .safe-zone:nth-child(7) { top: 195px; }
-            .safe-zone:nth-child(8) { top: 275px; }
-            .safe-zone:nth-child(9) { top: 355px; }
+            .safe-zone { height: 32px; } /* Adjusted proportionally */
+            .safe-zone:nth-child(6) { top: 92px; }
+            .safe-zone:nth-child(7) { top: 156px; }
+            .safe-zone:nth-child(8) { top: 220px; }
+            .safe-zone:nth-child(9) { top: 284px; }
+
+            .player {
+                width: 20px;
+                height: 20px;
+            }
+
+            .player::before {
+                font-size: 10px;
+            }
+
+            .car {
+                width: 40px;
+                height: 20px;
+            }
+
+            .car::before {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -319,7 +338,7 @@
                 <button class="control-btn" onclick="movePlayer('right')">→</button>
                 <button class="control-btn" onclick="movePlayer('down')">↓</button>
             </div>
-            <p style="margin-top: 15px; opacity: 0.8;">Use arrow keys or buttons to move • Avoid cars • Reach the top!</p>
+            <p style="margin-top: 12px; opacity: 0.8; font-size: 14px;">Use arrow keys or buttons to move • Avoid cars • Reach the top!</p>
         </div>
     </div>
 
@@ -332,16 +351,16 @@
                 this.levelElement = document.getElementById('level');
                 this.livesElement = document.getElementById('lives');
                 
-                this.playerPosition = { x: 235, y: 470 };
+                this.playerPosition = { x: 188, y: 376 }; // Adjusted for new board size (400px)
                 this.cars = [];
                 this.score = 0;
                 this.level = 1;
                 this.lives = 3;
                 this.gameRunning = false;
                 this.gameSpeed = 2;
-                
-                this.roadPositions = [115, 215, 315, 415];
-                this.safeZones = [0, 50, 145, 195, 245, 295, 345, 395, 445];
+                this.lastSafeZone = null;
+                this.roadPositions = window.innerWidth <= 768 ? [52, 116, 180, 244] : [64, 144, 224, 304];
+                this.safeZones = window.innerWidth <= 768 ? [0, 32, 92, 156, 220, 284] : [0, 40, 116, 196, 276, 356];
                 
                 this.init();
             }
@@ -380,30 +399,30 @@
             movePlayer(direction) {
                 if (!this.gameRunning) return;
                 
-                const moveDistance = 50;
+                const moveDistance = 40; // Reduced from 50 to match new scale
                 
                 switch(direction) {
                     case 'up':
                         if (this.playerPosition.y > 0) {
                             this.playerPosition.y -= moveDistance;
-                            if (this.playerPosition.y <= 25) {
+                            if (this.playerPosition.y <= 20) { // Adjusted win condition
                                 this.winLevel();
                                 return;
                             }
                         }
                         break;
                     case 'down':
-                        if (this.playerPosition.y < 470) {
+                        if (this.playerPosition.y < 376) { // Adjusted boundary
                             this.playerPosition.y += moveDistance;
                         }
                         break;
                     case 'left':
-                        if (this.playerPosition.x > 15) {
+                        if (this.playerPosition.x > 12) { // Adjusted boundary
                             this.playerPosition.x -= moveDistance;
                         }
                         break;
                     case 'right':
-                        if (this.playerPosition.x < 455) {
+                        if (this.playerPosition.x < 364) { // Adjusted boundary
                             this.playerPosition.x += moveDistance;
                         }
                         break;
@@ -419,9 +438,10 @@
             }
 
             checkSafeZoneScore() {
-                const currentY = this.playerPosition.y;
-                if (this.safeZones.includes(Math.round(currentY / 50) * 50)) {
+                const currentZone = Math.round(this.playerPosition.y / 40) * 40; // Adjusted for new scale
+                if (this.safeZones.includes(currentZone) && this.lastSafeZone !== currentZone) {
                     this.score += 10;
+                    this.lastSafeZone = currentZone;
                     this.updateUI();
                 }
             }
@@ -437,13 +457,13 @@
                 
                 if (direction === 'left') {
                     car.classList.add('car-left');
-                    car.style.left = '500px';
+                    car.style.left = '400px'; // Adjusted for new board width
                     car.style.top = roadY + 'px';
                     car.dataset.direction = 'left';
                     car.dataset.speed = (2 + Math.random() * 2) * this.gameSpeed;
                 } else {
                     car.classList.add('car-right');
-                    car.style.left = '-60px';
+                    car.style.left = '-48px'; // Adjusted for new car width
                     car.style.top = roadY + 'px';
                     car.dataset.direction = 'right';
                     car.dataset.speed = (2 + Math.random() * 2) * this.gameSpeed;
@@ -460,13 +480,13 @@
                     
                     if (car.dataset.direction === 'left') {
                         car.style.left = (currentLeft - speed) + 'px';
-                        if (currentLeft < -100) {
+                        if (currentLeft < -80) { // Adjusted boundary
                             car.remove();
                             this.cars.splice(index, 1);
                         }
                     } else {
                         car.style.left = (currentLeft + speed) + 'px';
-                        if (currentLeft > 560) {
+                        if (currentLeft > 448) { // Adjusted boundary
                             car.remove();
                             this.cars.splice(index, 1);
                         }
@@ -478,16 +498,16 @@
                 const playerRect = {
                     x: this.playerPosition.x,
                     y: this.playerPosition.y,
-                    width: 30,
-                    height: 30
+                    width: 24, // Adjusted for new player size
+                    height: 24
                 };
 
                 this.cars.forEach(car => {
                     const carRect = {
                         x: parseInt(car.style.left),
                         y: parseInt(car.style.top),
-                        width: 60,
-                        height: 30
+                        width: 48, // Adjusted for new car size
+                        height: 24
                     };
 
                     if (this.isColliding(playerRect, carRect)) {
@@ -516,11 +536,12 @@
                     this.gameOver();
                 } else {
                     this.resetPlayerPosition();
+                    this.lastSafeZone = null;
                 }
             }
 
             resetPlayerPosition() {
-                this.playerPosition = { x: 235, y: 470 };
+                this.playerPosition = { x: 188, y: 376 }; // Adjusted for new board size
                 this.updatePlayerPosition();
             }
 
@@ -533,6 +554,7 @@
                 this.showWinMessage();
                 setTimeout(() => {
                     this.resetPlayerPosition();
+                    this.lastSafeZone = null;
                     this.hideWinMessage();
                 }, 2000);
             }
@@ -540,32 +562,31 @@
             showWinMessage() {
                 const winDiv = document.createElement('div');
                 winDiv.className = 'game-win';
+                winDiv.id = 'winMessage';
                 winDiv.innerHTML = `
                     <h2>🎉 Level Complete!</h2>
                     <p>Level ${this.level - 1} cleared!</p>
-                    <p>Bonus: ${100 * (this.level - 1)} points</p>
                 `;
                 this.gameBoard.appendChild(winDiv);
             }
 
             hideWinMessage() {
-                const winDiv = this.gameBoard.querySelector('.game-win');
-                if (winDiv) winDiv.remove();
+                const win = document.getElementById('winMessage');
+                if (win) win.remove();
             }
 
             gameOver() {
                 this.gameRunning = false;
-                
-                const gameOverDiv = document.createElement('div');
-                gameOverDiv.className = 'game-over';
-                gameOverDiv.innerHTML = `
-                    <h2>💥 Game Over!</h2>
-                    <p>Final Score: ${this.score}</p>
-                    <p>Level Reached: ${this.level}</p>
-                    <button class="restart-btn" onclick="restartGame()">Play Again</button>
+                clearInterval(this.carInterval);
+
+                const overDiv = document.createElement('div');
+                overDiv.className = 'game-over';
+                overDiv.innerHTML = `
+                    <h2>💥 Game Over</h2>
+                    <p>Your score: ${this.score}</p>
+                    <button class="restart-btn" onclick="location.reload()">Restart</button>
                 `;
-                
-                this.gameBoard.appendChild(gameOverDiv);
+                this.gameBoard.appendChild(overDiv);
             }
 
             updateUI() {
@@ -577,15 +598,11 @@
             startGame() {
                 this.gameRunning = true;
                 this.gameLoop();
+                this.carInterval = setInterval(() => this.createCar(), 1000);
             }
 
             gameLoop() {
                 if (!this.gameRunning) return;
-
-                // Create cars randomly
-                if (Math.random() < 0.02 + (this.level * 0.005)) {
-                    this.createCar();
-                }
 
                 this.moveCars();
                 this.checkCollisions();
@@ -594,23 +611,21 @@
             }
 
             restart() {
-                // Clear cars
                 this.cars.forEach(car => car.remove());
                 this.cars = [];
                 
-                // Clear game over message
                 const gameOverDiv = this.gameBoard.querySelector('.game-over');
                 if (gameOverDiv) gameOverDiv.remove();
                 
                 const winDiv = this.gameBoard.querySelector('.game-win');
                 if (winDiv) winDiv.remove();
                 
-                // Reset game state
-                this.playerPosition = { x: 235, y: 470 };
+                this.playerPosition = { x: 188, y: 376 }; // Adjusted for new board size
                 this.score = 0;
                 this.level = 1;
                 this.lives = 3;
                 this.gameSpeed = 2;
+                this.lastSafeZone = null;
                 
                 this.updatePlayerPosition();
                 this.updateUI();
@@ -618,10 +633,8 @@
             }
         }
 
-        // Global game instance
         let game = new CrossroadGame();
 
-        // Global functions for buttons
         function movePlayer(direction) {
             game.movePlayer(direction);
         }
